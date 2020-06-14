@@ -1,13 +1,12 @@
 <template>
-  <div class="About">
-    <h1>This is an about page</h1>
-
+  <div class="Appointment">
+    <h1>This is Appointment detecting</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: 'Appointment',
   components: {
     //这里是用到等各种组件
   },

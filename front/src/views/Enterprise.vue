@@ -1,13 +1,12 @@
 <template>
-  <div class="About">
-    <h1>This is an about page</h1>
-
+  <div class="Enterprise">
+    <h1>This is Enterprise Enterprise dynamic</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: 'Enterprise',
   components: {
     //这里是用到等各种组件
   },

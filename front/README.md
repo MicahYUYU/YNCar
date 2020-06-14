@@ -7,13 +7,13 @@
 
 ### 开发者
 
-- 陈迎语
+- CYYukio 陈迎语
 
-- 夏铭
+- Rachel Xia 夏铭
 
-- 杨璞
+- Pizifly 杨璞
 
-- Micah 陈旭辉
+- MicahYUYU 陈旭辉
 
 ### 安装依赖
 

@@ -1,19 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Layout from '../components/layout'
-import Home from '../views/home'
 
-
-
+// import Layout from '../components/layout'
+import Home from '../views/home/index.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-    // {
-    //   path: '/',
-    //   name: 'Home',
-    //   component: Home
-    // },
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    }
     // {
     //   path: '/about',
     //   name: 'About',
@@ -22,22 +20,20 @@ const routes = [
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     // }
-    {
-        path: '/',
-        name: 'layout',
-        component: Layout,
-        redirect: '/home',
-        children: [
-            {
-                path: '/home',
-                name: '首页',
-                component: Home
-            }
-        ]
-    }
+    // {
+    //     path: '/',
+    //     name: 'layout',
+    //     component: Layout,
+    //     redirect: '/home',
+    //     children: [
+    //         {
+    //             path: '/home',
+    //             name: '首页',
+    //             component: Home
+    //         }
+    //     ]
+    // }
 ]
-
-
 
 const router = new VueRouter({
     routes

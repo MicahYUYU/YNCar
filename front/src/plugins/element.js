@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Button, Loading, Dialog, MessageBox, Table, TableColumn } from 'element-ui';
+import { Button, Loading, Dialog, MessageBox, Table, TableColumn,Carousel,CarouselItem } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
 
 
@@ -8,6 +8,8 @@ Vue.use(Loading);
 Vue.use(Dialog)
 Vue.use(Table)
 Vue.use(TableColumn)
+Vue.use(Carousel);
+Vue.use(CarouselItem);
 
 Vue.use(Loading.directive);
 

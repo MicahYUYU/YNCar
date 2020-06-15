@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    Footer
+    这是Footer
   </div>
 </template>
 

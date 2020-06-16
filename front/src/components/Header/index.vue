@@ -4,7 +4,27 @@
       <img src="@/assets/img_common/logo.png" />
     </div>
 
-    <div class='link'></div>
+    <div class='router-link'>
+      <!-- <router-link to="/" class="linkItem">首页</router-link>
+      <router-link to="/appointment" class="linkItem">预约检测</router-link>
+      <router-link to="/enterprise" class="linkItem">企业动态</router-link>
+      <router-link to="/about" class="linkItem">关于一诺</router-link> -->
+      <!-- <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu-item index="1">首页</el-menu-item>
+        <el-submenu index="2">
+          <template slot="title">预约检测</template>
+          <el-menu-item index="2-1">预约检测</el-menu-item>
+          <el-menu-item index="2-2">陪同看车</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="3">企业动态</el-menu-item>
+        <el-menu-item index="3">关于一诺</el-menu-item>
+      </el-menu> -->
+      <el-menu :default-active="this.$route.path" router mode="horizontal">
+        <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name">
+          {{ item.navItem }}
+        </el-menu-item>
+      </el-menu>
+    </div>
 
     <div class="wechat">
       <img src="@/assets/img_common/icon_wechat.png" class="wechat0" />
@@ -26,7 +46,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "header",
+  components: {},
+  data () {
+    return {
+      navList: [
+        { name: '/', navItem: '首页' },
+        { name: '/appointment', navItem: '预约检测' },
+        { name: '/enterprise', navItem: '企业动态' },
+        { name: '/about', navItem: '关于一诺' },
+      ]
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -44,12 +77,25 @@ export default {};
       top: 20px;
     }
   }
-  .link {
+  .router-link {
     position: absolute;
-    background-color: aqua;
-    left: 300px;
+    left: 270px;
     width: 500px;
     height: 90px;
+    /deep/ .el-menu {
+      position: relative;
+      top: 15px;
+    }
+    /deep/.el-menu-item {
+      font-size: 18px;
+      padding: 0 25px;
+    }
+    /deep/.el-submenu__title {
+      font-size: 18px;
+    }
+    /deep/ .el-menu--horizontal {
+      border-bottom: none;
+    }
   }
   .wechat {
     position: absolute;

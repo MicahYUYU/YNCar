@@ -1,4 +1,5 @@
 <template>
+<!-- 预约检测 -->
   <div class="Appointment">
     <h1>This is Appointment detecting</h1>
   </div>

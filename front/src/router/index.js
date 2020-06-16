@@ -6,28 +6,36 @@ import Home from '../views/home'
 import Appointment from '../views/Appointment'
 import About from '../views/About'
 import Enterprise from '../views/Enterprise'
-
+import Watch from '../views/Watch'
 Vue.use(VueRouter)
 
+
+//具体页面在views下面对应页面
+//header和footer写在了components下面，模仿主页调用<y-header>（驼峰式写法）
 const routes = [
     {
         path: '/',
-        name: 'Home',
+        name: '主页',
         component: Home
     },
     {
         path: '/appointment',
-        name: 'Appointment',
+        name: '车辆检测',
         component: Appointment
     },
     {
+        path: '/watch',
+        name: '陪同看车',
+        component: Watch
+    },
+    {
         path: '/about',
-        name: 'About',
+        name: '关于一诺',
         component: About
     },
     {
         path: '/enterprise',
-        name: 'Enterprise',
+        name: '企业动态',
         component: Enterprise
     }
     // {

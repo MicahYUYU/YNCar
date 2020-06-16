@@ -1,14 +1,10 @@
  <template>
   <div class="header">
-    <div class="home">
+    <div class="home" @click="switchTo('/')">
       <img src="@/assets/img_common/logo.png" />
     </div>
 
     <div class='router-link'>
-      <!-- <router-link to="/" class="linkItem">首页</router-link>
-      <router-link to="/appointment" class="linkItem">预约检测</router-link>
-      <router-link to="/enterprise" class="linkItem">企业动态</router-link>
-      <router-link to="/about" class="linkItem">关于一诺</router-link> -->
       <!-- <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
         <el-menu-item index="1">首页</el-menu-item>
         <el-submenu index="2">
@@ -58,20 +54,32 @@ export default {
         { name: '/about', navItem: '关于一诺' },
       ]
     }
+  },
+  methods: {
+    switchTo (path) {
+      console.log(this.$router);
+      this.$router.replace(path);
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 90px;
+  z-index: 100;
+  background-color: #fff;
 
   .home {
     position: absolute;
     left: 50px;
     width: 150px;
     height: 90px;
+    cursor: pointer;
     img {
       position: relative;
       top: 20px;
@@ -102,6 +110,7 @@ export default {
     right: 340px;
     width: 90px;
     height: 90px;
+    cursor: pointer;
     &:hover {
       .wechat0 {
         display: none;
@@ -110,7 +119,7 @@ export default {
         display: inline;
       }
       .qrcode {
-        display: inline;
+        opacity: 1;
       }
     }
     .wechat0 {
@@ -133,7 +142,8 @@ export default {
       position: absolute;
       top: 85px;
       right: 0px;
-      display: none;
+      transition: 1s;
+      opacity: 0;
       &::before {
         content: "";
         width: 0;

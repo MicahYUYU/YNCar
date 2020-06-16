@@ -1,14 +1,20 @@
 <template>
   <div class="Enterprise">
+    <y-header></y-header>
     <h1>This is Enterprise Enterprise dynamic</h1>
+    <y-footer></y-footer>
   </div>
 </template>
 
 <script>
+import YHeader from '../../components/Header';
+import YFooter from '../../components/Footer';
 export default {
   name: 'Enterprise',
   components: {
     //这里是用到等各种组件
+    YHeader,
+    YFooter
   },
   data () {
     return {

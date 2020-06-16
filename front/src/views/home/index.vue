@@ -17,9 +17,9 @@
 
       <div width="100px">
         <div class="block1">
-          <img src="@/assets/img_home/img1.jpg" class="zoom"/>
+          <img src="@/assets/img_home/img1.jpg" class="zoom" />
         </div>
-      
+
         <!-- 2 3 4区块 -->
         <div class="block2and3and4">
           <div class="block2">关于一诺</div>
@@ -37,10 +37,7 @@
 
         <div class="block5">预约检测</div>
       </div>
-      
-      
 
-      
       <div class="block6">检测套餐</div>
 
       <div class="block7">
@@ -48,20 +45,22 @@
       </div>
 
     </div>
-
+    <y-footer></y-footer>
   </div>
 </template>
 
 <script>
-import YHeader from "../../components/Header";
+import YHeader from '../../components/Header';
+import YFooter from '../../components/Footer';
 
 export default {
   name: "Home",
   components: {
     //这里是用到等各种组件
-    YHeader
+    YHeader,
+    YFooter
   },
-  data() {
+  data () {
     return {
       bannerList: [
         require("@/assets/img_home/banner1.jpg"),
@@ -82,7 +81,6 @@ export default {
   position: relative;
 }
 
-
 .main_info {
   position: relative;
   left: 100px;
@@ -98,12 +96,11 @@ export default {
   overflow: hidden;
 }
 
-.zoom{
+.zoom {
   transition: all 1s;
 }
-.zoom:hover{
+.zoom:hover {
   transform: scale(1.2);
-  
 }
 
 .block2and3and4 {
@@ -149,13 +146,13 @@ export default {
 
 .block6 {
   position: absolute;
-  top:304px;
-  background-color: #0f53B0;
+  top: 304px;
+  background-color: #0f53b0;
   width: 304px;
   height: 304px;
 }
 
-.block7{
+.block7 {
   position: relative;
   float: left;
   left: -608px;

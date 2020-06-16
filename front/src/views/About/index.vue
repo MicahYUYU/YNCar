@@ -1,16 +1,21 @@
 <template>
 <!-- 关于一诺 -->
   <div class="About">
+    <y-header></y-header>
     <h1>This is an about page</h1>
-
+    <y-footer></y-footer>
   </div>
 </template>
 
 <script>
+import YHeader from '../../components/Header';
+import YFooter from '../../components/Footer';
 export default {
   name: 'About',
   components: {
     //这里是用到等各种组件
+    YHeader,
+    YFooter
   },
   data () {
     return {

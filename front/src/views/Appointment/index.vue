@@ -1,15 +1,21 @@
 <template>
 <!-- 预约检测 -->
   <div class="Appointment">
+    <y-header></y-header>
     <h1>This is Appointment detecting</h1>
+    <y-footer></y-footer>
   </div>
 </template>
 
 <script>
+import YHeader from '../../components/Header';
+import YFooter from '../../components/Footer';
 export default {
   name: 'Appointment',
   components: {
     //这里是用到等各种组件
+    YHeader,
+    YFooter
   },
   data () {
     return {

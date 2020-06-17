@@ -64,6 +64,7 @@ export default {
     .content {
       height: 330px;
       overflow: hidden;
+      width: 100%;
       .content-img {
         position: relative;
         left: -280px;

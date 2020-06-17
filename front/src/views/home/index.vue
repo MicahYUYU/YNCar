@@ -31,7 +31,7 @@
               INNO
               <br>
               Detecting
-              <hr style="width:50px;color:white;height:1px;background-color:#ffffff" align="left"> 
+              <hr style="width:50px;color:white;height:2px;background-color:#ffffff;border-width:0;" align="left"> 
               <span style="font-size:15px">关于一诺</span>
             </div>
           </div>
@@ -77,7 +77,7 @@
               DETECTION
               <br>
               order
-              <hr style="width:50px;color:white;height:1px;background-color:#ffffff">
+              <hr style="width:50px;color:white;height:2px;background-color:#ffffff;border-width:0;">
               预约检测
             </div>
           </div>
@@ -92,7 +92,7 @@
             DETECTION OF
             <br>
             package
-            <hr style="width:50px;color:white;height:1px;background-color:#ffffff" align="left">
+            <hr style="width:50px;color:white;height:2px;background-color:#ffffff;border-width:0;" align="left">
             检测套餐
           </div>
 
@@ -117,7 +117,7 @@
           </div>
 
           <div class="car_char">
-            <hr style="width:50px;color:white;height:1px;background-color:black" align="left">
+            <hr style="width:50px;color:white;height:2px;background-color:black;border-width:0;" align="left">
             值得信赖的二手车检测专家
             <br><br>
             <span style="color:grey;font-size:15px;line-height:25px">TRUSTWORTHY USED CAR</span>
@@ -131,7 +131,7 @@
             DETECTION SERVICE
             <br>
             process
-            <hr style="width:50px;color:white;height:1px;background-color:#ffffff" align="left">
+            <hr style="width:50px;color:white;height:2px;background-color:#ffffff;border-width:0;" align="left">
             服务流程
           </div>
 
@@ -148,6 +148,27 @@
 
     <!-- 取消浮动 -->
     <div class="quxiao"></div>
+
+    <div class="hr1">
+      <hr style="background-color:#DEDEDE;height:3px;border-width:0;">
+      <div class="hr1_char">
+        SPECIAL
+        <br>
+        quality
+        <br>
+        detections
+        <hr style="background-color:black;height:2px;border-width:0;width:50px">
+        专业质量检测
+      </div>
+
+      <div style="position:relative;top:-140px">
+        <span style="font-size:18px;color:#FFC000">229 </span>
+        <span style="font-size:13px;">项检测排查四大类车况，全面检测车况，提供专业检测报告</span> 
+      </div>
+    </div>
+
+
+
     <y-footer class="foot"></y-footer>
   </div>
 </template>
@@ -198,11 +219,14 @@ export default {
 }
 
 .main_info {
+  
+  margin-left: 120px;
+  margin-left: 120px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   position: relative;
-  left: 100px;
-  right: 100px;
-  top: -100px;
   float: left;
+  top: -100px;
   z-index: 3;
   height: 912px;
 }
@@ -503,5 +527,22 @@ export default {
   top: -210px;
   left: 80px;
   text-align: left;
+}
+
+.hr1{
+  width: 1216px;
+  height: 300px;
+  margin:auto;
+}
+
+.hr1_char{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  font-size: 18px;
+  font-family: "微软雅黑";
+  margin:auto;
+  top: -70px;
+  background-color: white;
 }
 </style>

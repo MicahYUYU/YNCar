@@ -259,7 +259,7 @@ export default {
 
   .main_info {
     height: 800px;
-    width: 100%;
+    width: 1900px;
     overflow: hidden;
   }
 
@@ -335,8 +335,11 @@ export default {
     background-color: #ffffff;
   }
   .bg_word {
+    width: 500px;
+    height: 300px;
     position: relative;
     top: -1780px;
+    left: 700PX;
     z-index: 3;
     .w1 {
       position: relative;
@@ -409,6 +412,7 @@ export default {
     color: #d6d6d6;
     top: 10px;
     height: 50px;
+    width: 1900px;
     .iwl {
       position: relative;
       left: -220px;
@@ -469,6 +473,8 @@ export default {
     transform: translate(1900px, 0px);
   }
   .carWord {
+    height: 10px;
+    width: 50px;
     position: relative;
     top: -120px;
     font-size: 30px;

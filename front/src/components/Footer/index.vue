@@ -53,6 +53,8 @@
         <div class="linkTitle">关注我们</div>
         <div class="code"></div>
       </div>
+      <hr class="line" />
+      <div class="copyright">版权所有Copyright@2016 nuesoft保留所有版权</div>
     </div>
   </div>
 </template>
@@ -128,7 +130,7 @@ export default {
     }
     span {
       position: relative;
-      top: -20px;
+      top: -23px;
       left: 25px;
       font-size: 18px;
       color: #999999;
@@ -256,6 +258,23 @@ export default {
       .email {
         border-bottom: none !important;
       }
+    }
+    .line {
+      position: absolute;
+      bottom: 70px;
+      left: 70px;
+      width: 90%;
+      border: none;
+      height: 1px;
+      background-color: #333333;
+    }
+    .copyright {
+      position: absolute;
+      bottom: 40px;
+      left: 70px;
+      font-size: 13px;
+      font-weight: initial;
+      color: #555555;
     }
   }
 }

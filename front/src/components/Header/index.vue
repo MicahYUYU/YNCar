@@ -138,7 +138,8 @@ export default {
       background-color: #fff;
       z-index: 10;
       border-radius: 7px;
-      border: 2px solid #66ccff;
+      //   border: 2px solid #66ccff;
+      border: 2px solid #0f6bb0;
       position: absolute;
       top: 85px;
       right: 0px;
@@ -152,7 +153,8 @@ export default {
         position: absolute;
         top: -40px;
         left: 125px;
-        border-color: transparent transparent #66ccff;
+        // border-color: transparent transparent #66ccff;
+        border-color: transparent transparent #0f6bb0;
       }
       .tansparent {
         content: "";

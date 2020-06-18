@@ -8,7 +8,7 @@
     <div class="title">{{new_title}}</div>
     <div class="content">{{new_content}}</div>
     <div class="icon">
-      <img src="../../assets/img_enterprise">
+      <!-- <img src="../../assets/img_enterprise"> -->
     </div>
   </div>
 </template>

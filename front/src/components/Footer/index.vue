@@ -80,6 +80,7 @@ export default {
 
 <style scoped lang="scss">
 .footer {
+  margin-top: 60px;
   width: 100%;
   position: relative;
 

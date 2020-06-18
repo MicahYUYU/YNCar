@@ -1,14 +1,14 @@
 <template>
   <div class="New">
     <div class="picture">
-      <img id='pic' src="">
+      <img :src='new_url'>
     </div>
     <div class="year"><span class='year-cont'>{{new_year}}</span></div>
     <div class="date">{{new_date}}</div>
     <div class="title">{{new_title}}</div>
     <div class="content">{{new_content}}</div>
     <div class="icon">
-      <!-- <img src="../../assets/img_enterprise"> -->
+      <img src="@assets/img_enterprise/circle.png">
     </div>
   </div>
 </template>
@@ -25,36 +25,40 @@ export default {
   },
   date () {
     return {
-
     }
   },
   methods: {
-    assignSrc () {
-      this.$('#pic').attr('src', this.new_url);
-    }
   },
   mounted () {
-    this.assignSrc();
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .New {
+  position: relative;
+  margin: 40px auto;
   width: 100%;
   height: 350px;
   border: solid 1px #dddddd;
   text-align: left;
 
   .picture {
-    position: relative;
+    position: absolute;
     left: 40px;
     top: 30px;
     width: 260px;
     height: 300px;
-    display: inline-block;
+    overflow: hidden;
+    box-shadow: -3px 4px 9px 2px rgba(50, 50, 60, 0.5);
+    // display: inline-block;
     img {
-      width: 100%;
+      //   width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
   .year {
@@ -96,6 +100,22 @@ export default {
     width: 72%;
     color: #666666;
     font-size: 15px;
+  }
+  .icon {
+    width: 30px;
+    background-image: url("../../assets/img_enterprise/arrow.png");
+    background-repeat: no-repeat;
+    background-position: 11px 9px;
+    position: absolute;
+    left: 370px;
+    bottom: 30px;
+    cursor: pointer;
+    &:hover img {
+      transform: rotate(360deg);
+    }
+    img {
+      transition: all 1s;
+    }
   }
 }
 </style>

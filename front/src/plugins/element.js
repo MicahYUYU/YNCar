@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Button, Loading, Dialog, MessageBox, Table, TableColumn, Carousel, CarouselItem, Menu, MenuItem, Submenu, Pagination,Card } from 'element-ui';
+import { Button, Loading, Dialog, MessageBox, Table, TableColumn, Carousel, CarouselItem, Menu, MenuItem, Submenu, Pagination,Card,Input } from 'element-ui';
 
 
 import 'element-ui/lib/theme-chalk/index.css'
@@ -15,9 +15,8 @@ Vue.use(CarouselItem);
 Vue.use(Menu);
 Vue.use(MenuItem);
 Vue.use(Submenu);
-
 Vue.use(Pagination);
-
+Vue.use(Input);
 Vue.use(Card);
 
 

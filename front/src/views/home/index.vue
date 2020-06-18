@@ -1,6 +1,9 @@
 <template>
   <div class="home" style="position:relative;">
     <y-header></y-header>
+
+    <y-zixun></y-zixun>
+
     <!-- banner -->
     <div class="banner">
       <el-carousel trigger="click" height="700px">
@@ -203,7 +206,7 @@
     <div class="team">
       <el-card class="card">
         <div class="team_img" style="overflow:hidden">
-          <img src="@/assets/img_team/cyy.jpg" width="140%" style="margin-left:-50px">
+          <img src="@/assets/img_team/cyy.jpg" width="140%" style="margin-left:-50px" class="zoom">
         </div>
         
         <div class="team_info">
@@ -232,7 +235,9 @@
       </el-card>
 
       <el-card class="card">
-        <img src="@/assets/img_team/cxh.jpg" class="team_img">
+        <div class="team_img">
+          <img src="@/assets/img_team/cxh.jpg" class="zoom" style="width:100%">
+        </div>
         <div class="team_info">
           <span>陈 旭辉</span>
 
@@ -261,7 +266,9 @@
       </el-card>
 
       <el-card class="card">
-        <img src="@/assets/img_team/yp.jpg" class="team_img">
+        <div class="team_img">
+          <img src="@/assets/img_team/yp.jpg" class="zoom" style="width:100%">
+        </div>
         <div class="team_info">
           <span>杨 璞</span>
 
@@ -288,7 +295,10 @@
       </el-card>
 
       <el-card class="card">
-        <img src="@/assets/img_team/yp.jpg" class="team_img">
+        <div class="team_img">
+          <img src="@/assets/img_team/yp.jpg" class="zoom" style="width:100%">
+        </div>
+        
         <div class="team_info">
           <span>夏 铭</span>
 
@@ -322,13 +332,15 @@
 <script>
 import YHeader from '../../components/Header';
 import YFooter from '../../components/Footer';
+import YZixun from '../../components/zixun'
 
 export default {
   name: "Home",
   components: {
     //这里是用到等各种组件
     YHeader,
-    YFooter
+    YFooter,
+    YZixun
   },
   data () {
     return {
@@ -438,6 +450,7 @@ export default {
 }
 
 
+
 // 取消浮动（float：left）
 .quxiao{
   clear: both;
@@ -446,8 +459,6 @@ export default {
 }
 
 .main_info {
-  
-  margin-left: 120px;
   margin-left: 120px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -892,6 +903,7 @@ export default {
   margin: auto;
   border: grey;
   border-style: solid;
+  overflow: hidden;
 }
 
 .team_info{

@@ -1,6 +1,8 @@
 <template>
   <div class="Enterprise">
     <y-header></y-header>
+
+    <y-zixun></y-zixun>
     <div class="banner">
       <div class="title left">
         <img src="@assets/img_enterprise/title.png" id="picL" />
@@ -45,6 +47,7 @@ import NewImg3 from "@assets/img_enterprise/20170524,10,09,392.jpg";
 import NewImg4 from "@assets/img_enterprise/20170511,10,00,261.jpg";
 import NewImg5 from "@assets/img_enterprise/20170505,10,08,354.jpg";
 import NewImg6 from "@assets/img_enterprise/20170502,10,28,334.jpg";
+import YZixun from '../../components/zixun';
 
 export default {
   name: 'Enterprise',
@@ -52,7 +55,8 @@ export default {
     //这里是用到等各种组件
     YHeader,
     YFooter,
-    New
+    New,
+    YZixun
   },
   data () {
     return {

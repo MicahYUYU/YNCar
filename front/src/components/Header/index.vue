@@ -1,22 +1,12 @@
- <template>
+<template>
   <div class="header">
     <div class="home" @click="switchTo('/')">
       <img src="@/assets/img_common/logo.png" />
     </div>
 
-    <div class='router-link'>
-      <!-- <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1">首页</el-menu-item>
-        <el-submenu index="2">
-          <template slot="title">预约检测</template>
-          <el-menu-item index="2-1">预约检测</el-menu-item>
-          <el-menu-item index="2-2">陪同看车</el-menu-item>
-        </el-submenu>
-        <el-menu-item index="3">企业动态</el-menu-item>
-        <el-menu-item index="3">关于一诺</el-menu-item>
-      </el-menu> -->
+    <div class="router-link">
       <el-menu :default-active="this.$route.path" router mode="horizontal">
-        <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name">
+        <el-menu-item v-for="(item, i) in navList" :key="i" :index="item.name">
           {{ item.navItem }}
         </el-menu-item>
       </el-menu>
@@ -43,24 +33,24 @@
 
 <script>
 export default {
-  name: "header",
+  name: 'header',
   components: {},
-  data () {
+  data() {
     return {
       navList: [
         { name: '/', navItem: '首页' },
         { name: '/appointment', navItem: '预约检测' },
         { name: '/enterprise', navItem: '企业动态' },
         { name: '/about', navItem: '关于一诺' },
-      ]
-    }
+      ],
+    };
   },
   methods: {
-    switchTo (path) {
+    switchTo(path) {
       console.log(this.$router);
       this.$router.replace(path);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -106,58 +96,62 @@ export default {
     }
   }
   .wechat {
+    // background-color: aqua;
     position: absolute;
     right: 340px;
-    width: 90px;
-    height: 90px;
+    margin: 35px;
+    width: 25px;
+    height: 20px;
     cursor: pointer;
     &:hover {
       .wechat0 {
-        display: none;
+        opacity: 0;
       }
       .wechat1 {
-        display: inline;
+        opacity: 1;
       }
       .qrcode {
-        opacity: 1;
+        // opacity: 1;
+        display: inline;
+        // transition: 0.5s;
       }
     }
     .wechat0 {
-      position: relative;
-      top: 35px;
+      position: absolute;
+      right: 0;
+      transition: 0.5s;
+      opacity: 1;
     }
     .wechat1 {
-      position: relative;
-      top: 35px;
-      z-index: -1;
-      display: none;
+      position: absolute;
+      right: 0;
+      transition: 0.5s;
+      opacity: 0;
     }
     .qrcode {
       width: 185px;
       height: 185px;
       background-color: #fff;
-      z-index: 10;
       border-radius: 7px;
-      //   border: 2px solid #66ccff;
       border: 2px solid #0f6bb0;
       position: absolute;
-      top: 85px;
-      right: 0px;
-      transition: 1s;
-      opacity: 0;
+      top: 50px;
+      right: -30px;
+      //   transition: all 0.5s linear;
+      //   opacity: 0;
+      display: none;
       &::before {
-        content: "";
+        content: '';
         width: 0;
         height: 0;
         border: 20px solid;
         position: absolute;
         top: -40px;
         left: 125px;
-        // border-color: transparent transparent #66ccff;
         border-color: transparent transparent #0f6bb0;
       }
       .tansparent {
-        content: "";
+        content: '';
         width: 0;
         height: 0;
         border: 20px solid;

@@ -15,27 +15,27 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        name: '主页',
+        name: 'home',
         component: Home
     },
     {
         path: '/appointment',
-        name: '车辆检测',
+        name: 'appointment',
         component: Appointment
     },
     {
         path: '/watch',
-        name: '陪同看车',
+        name: 'watch',
         component: Watch
     },
     {
         path: '/about',
-        name: '关于一诺',
+        name: 'about',
         component: About
     },
     {
         path: '/enterprise',
-        name: '企业动态',
+        name: 'enterprise',
         component: Enterprise
     }
     // {

@@ -41,9 +41,7 @@
     </div>
     <div class="info">
       <div class="main_info">
-        <p
-          style="font-size: 20px; font-weight: bold; line-height: 40px;"
-        >秉承“致力车辆买卖信息对称，健全车辆流通信用体制”的使命</p>
+        <p style="font-size: 20px; font-weight: bold; line-height: 40px;">秉承“致力车辆买卖信息对称，健全车辆流通信用体制”的使命</p>
         <p style="color: #b6b6b6;">一诺检测建立起一支由汽车研发工程师、整车评审工程师以及资深维修技师组成的专业检测师团队</p>
         <p style="color: #b6b6b6;">只为让更多的客户可以享受到车辆买卖信息对称带来的优质体验</p>
         <div class="img2">
@@ -122,22 +120,22 @@ export default {
   components: {
     //这里是用到等各种组件
     YHeader,
-    YFooter
+    YFooter,
   },
-  data() {
+  data () {
     return {
       //这里返回变量
     };
   },
   methods: {
-    moveL() {
+    moveL () {
       this.$("#picL").animate({ left: 0 }, 500);
     },
-    moveR() {
+    moveR () {
       this.$("#picR").animate({ right: "100%" }, 500);
     }
   },
-  mounted() {
+  mounted () {
     //这里是页面加载完毕以后要自动执行的函数
     this.moveL();
     this.moveR();
@@ -254,8 +252,8 @@ export default {
     position: relative;
     top: 77px;
   }
-  
-  .info{
+
+  .info {
     position: relative;
     width: 100%;
     overflow: hidden;

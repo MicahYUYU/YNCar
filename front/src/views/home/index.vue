@@ -316,7 +316,7 @@ export default {
   top: -304px;
   background: url("~@/assets/img_home/inno.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   overflow: hidden;
 }
 

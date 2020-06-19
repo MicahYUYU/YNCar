@@ -167,7 +167,7 @@ export default {
     }
     .title {
       position: absolute;
-      width: 79px;
+      width: 90px;
       height: 316px;
       display: inline-block;
       z-index: 10;
@@ -263,9 +263,10 @@ export default {
   }
 
   .main_info {
-    position: relative;
+    //position: relative;
     margin: 0, auto;
-    left: 0;
+    margin-left: 460px;
+    // left: 2;
     height: 1030px;
     width: 1190px;
     overflow: hidden;
@@ -472,6 +473,7 @@ export default {
     background-repeat: no-repeat;
     width: 100%;
     height: 240px;
+    z-index: 5;
   }
 
   .car {

@@ -31,6 +31,8 @@
         <span class="word">联系我们</span>
       </div>
     </div>
+
+    <!-- banner -->
     <div>
       <div class="img1">
         <p class="img1_title">
@@ -40,52 +42,68 @@
         </p>
       </div>
     </div>
-    <div class="info">
-      <div class="main_info">
-        <p style="font-size: 20px; font-weight: bold; line-height: 40px;">秉承“致力车辆买卖信息对称，健全车辆流通信用体制”的使命</p>
+
+    <!-- 取消浮动 -->
+    <div class="quxiao"></div>
+
+    <div class="main_info">
+      <div class="info_char">
+        <p
+          style="font-size: 20px; font-weight: bold; line-height: 40px;"
+        >秉承“致力车辆买卖信息对称，健全车辆流通信用体制”的使命</p>
         <p style="color: #b6b6b6;">一诺检测建立起一支由汽车研发工程师、整车评审工程师以及资深维修技师组成的专业检测师团队</p>
         <p style="color: #b6b6b6;">只为让更多的客户可以享受到车辆买卖信息对称带来的优质体验</p>
-        <div class="img2">
-          <img src="@/assets/img_about/img2.jpg" class="zoom" />
-        </div>
-        <div class="intro1">
-          <img src="@/assets/img_about/intro1.png" />
-        </div>
-        <div class="img3">
-          <img src="@/assets/img_about/img3.jpg" class="zoom" />
-        </div>
-        <div class="intro2">
-          <img src="@/assets/img_about/intro2.png" />
-        </div>
-        <div class="img4">
-          <img src="@/assets/img_about/img4.jpg" class="zoom" />
-        </div>
-        <div class="intro3">
-          <img src="@/assets/img_about/intro3.png" />
-        </div>
-        <div class="bg">
-          <img src="@/assets/img_about/bg.jpg" />
-        </div>
-        <p class="bg_title">坚持“专注细节、品质服务”的理念</p>
-        <hr class="line_2" />
-        <div class="bg_word">
-          <p class="w1">一诺检测是隶属于伤害振森汽车服务有限公司的一家第三方车辆检测平台，</p>
-          <p class="w2">并以《二手车鉴定评估技术规范》的国家标准为基础，</p>
-          <p class="w3">综合车辆流通市场实际需求，</p>
-          <p class="w4">研发并制定出涵盖检测项目：229项的专业检测车辆鉴定评估体系，</p>
-          <p class="w5">力求每一个检测细节都做到极致。</p>
+      </div>
+
+      <div class="main_pic">
+        <div class="inner_pic">
+          <div class="img2">
+            <img src="@/assets/img_about/img2.jpg" class="zoom" />
+          </div>
+          <div class="intro1">
+            <img src="@/assets/img_about/intro1.png" />
+          </div>
+          <div class="img3">
+            <img src="@/assets/img_about/img3.jpg" class="zoom" />
+          </div>
+          <div class="intro2">
+            <img src="@/assets/img_about/intro2.png" />
+          </div>
+          <div class="img4">
+            <img src="@/assets/img_about/img4.jpg" class="zoom" />
+          </div>
+          <div class="intro3">
+            <img src="@/assets/img_about/intro3.png" />
+          </div>
+          <div class="bg">
+            <img src="@/assets/img_about/bg.jpg" />
+          </div>
+          <p class="bg_title">坚持“专注细节、品质服务”的理念</p>
+          <hr class="line_2" />
+          <div class="bg_word">
+            <p class="w1">一诺检测是隶属于伤害振森汽车服务有限公司的一家第三方车辆检测平台，</p>
+            <p class="w2">并以《二手车鉴定评估技术规范》的国家标准为基础，</p>
+            <p class="w3">综合车辆流通市场实际需求，</p>
+            <p class="w4">研发并制定出涵盖检测项目：229项的专业检测车辆鉴定评估体系，</p>
+            <p class="w5">力求每一个检测细节都做到极致。</p>
+          </div>
         </div>
       </div>
     </div>
-    <div>
-      <div class="iconL"></div>
-      <div class="iconM"></div>
-      <div class="iconR"></div>
-      <div class="icon_word">
-        <span class="iwl">上门检测</span>
-        <span class="iwm">到店检测</span>
-        <span class="iwr">陪同看车</span>
+
+    <div class="yuanquan">
+      <div class="icon_3">
+          <div class="iconL"></div>
+          <div class="iconM"></div>
+          <div class="iconR"></div>
       </div>
+      
+    </div>
+
+    <div class="icon_word">
+      <span class="iwl">上门检测</span>
+      <span class="iwm">到店检测</span>
+      <span class="iwr">陪同看车</span>
     </div>
 
     <div style="height: 200px; overflow: hidden;">
@@ -116,7 +134,7 @@
 <script>
 import YHeader from "../../components/Header";
 import YFooter from "../../components/Footer";
-import YZixun from '../../components/zixun';
+import YZixun from "../../components/zixun";
 export default {
   name: "About",
   components: {
@@ -125,20 +143,20 @@ export default {
     YFooter,
     YZixun
   },
-  data () {
+  data() {
     return {
       //这里返回变量
     };
   },
   methods: {
-    moveL () {
+    moveL() {
       this.$("#picL").animate({ left: 0 }, 500);
     },
-    moveR () {
+    moveR() {
       this.$("#picR").animate({ right: "100%" }, 500);
     }
   },
-  mounted () {
+  mounted() {
     //这里是页面加载完毕以后要自动执行的函数
     this.moveL();
     this.moveR();
@@ -149,6 +167,12 @@ export default {
 <style scoped lang="scss">
 .About {
   width: 100%;
+
+  .quxiao{
+  clear: both;
+  width: 0%;
+  height: 0%;
+  }
 
   .banner {
     width: 100%;
@@ -268,12 +292,20 @@ export default {
 
   .main_info {
     //position: relative;
-    margin: 0, auto;
-    margin-left: 460px;
+    //margin: 0, auto;
     // left: 2;
     height: 1030px;
-    width: 1190px;
+    width: 100%;
     overflow: hidden;
+  }
+
+  .main_pic {
+    width: 100%;
+  }
+
+  .inner_pic {
+    position: relative;
+    left: -220px;
   }
 
   .img2 {
@@ -392,33 +424,46 @@ export default {
     }
   }
 
+  .icon_3{
+    margin-left: 330px;
+    height: 80px;
+    width: 100%;
+  }
+
   .iconL {
+    position: relative;
+    float: left;
     background-image: url("~@/assets/img_about/icon.png");
     background-position: left;
     background-repeat: no-repeat;
     width: 77px;
     height: 80px;
-    margin-left: 625px;
+    margin-right: 100px;
+    margin-left: 100px;
   }
 
   .iconM {
+    position: relative;
+    float: left;
     background-image: url("~@/assets/img_about/icon.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 77px;
     height: 80px;
-    margin-left: 905px;
-    margin-top: -80px;
+    margin-right: 100px;
+    margin-left: 100px;
   }
 
   .iconR {
+    position: relative;
+    float: left;
     background-image: url("~@/assets/img_about/icon.png");
     background-position: right;
     background-repeat: no-repeat;
     width: 77px;
     height: 80px;
-    margin-left: 1185px;
-    margin-top: -80px;
+    margin-right: 100px;
+    margin-left: 100px;
   }
 
   .icon_word {
@@ -429,15 +474,15 @@ export default {
     width: 1900px;
     .iwl {
       position: relative;
-      left: -220px;
+      left: -415px;
     }
     .iwm {
       position: relative;
-      left: -6px;
+      left: -205px;
     }
     .iwr {
       position: relative;
-      right: -210px;
+      left: 10px;
     }
   }
 

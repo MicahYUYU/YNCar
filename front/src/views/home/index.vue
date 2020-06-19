@@ -1,6 +1,9 @@
 <template>
   <div class="home" style="position:relative;">
     <y-header></y-header>
+
+    <y-zixun></y-zixun>
+
     <!-- banner -->
     <div class="banner">
       <el-carousel trigger="click" height="700px">
@@ -151,6 +154,7 @@
 
     <div class="hr1">
       <hr style="background-color:#DEDEDE;height:3px;border-width:0;">
+      
       <div class="hr1_char">
         SPECIAL
         <br>
@@ -162,12 +166,164 @@
       </div>
 
       <div style="position:relative;top:-140px">
-        <span style="font-size:18px;color:#FFC000">229 </span>
+        <span style="font-size:18px;color:#FFC000">229  </span>
         <span style="font-size:13px;">项检测排查四大类车况，全面检测车况，提供专业检测报告</span> 
       </div>
     </div>
 
+    <div class="warn">
+      <div class="warn1" @mouseover="fadeout1()" @mouseleave="fadein1()">
+        <img src="@/assets/img_home/no.png" id="warn_img1">
+      </div>
+      <div class="warn2" @mouseover="fadeout2()" @mouseleave="fadein2()">
+        <img src="@/assets/img_home/no.png" id="warn_img2">
+      </div>
+      <div class="warn3" @mouseover="fadeout3()" @mouseleave="fadein3()">
+        <img src="@/assets/img_home/no.png" id="warn_img3">
+      </div>
+      <div class="warn4" @mouseover="fadeout4()" @mouseleave="fadein4()">
+        <img src="@/assets/img_home/no.png" id="warn_img4">
+      </div>
+    </div>
 
+    <div class="hr2">
+      <hr style="background-color:#DEDEDE;height:3px;border-width:0;">
+      
+      <div class="hr2_char">
+        innodetecting
+        <br>
+        仿站
+        <hr style="background-color:black;height:2px;border-width:0;width:50px">
+        制作团队
+      </div>
+
+      <div style="position:relative;top:-55px">
+        <span style="font-size:18px;color:#FFC000">(伪)精英级  </span>
+        <span style="font-size:13px;">开发工程师随时待命</span> 
+      </div>
+    </div>
+
+    <div class="team">
+      <el-card class="card">
+        <div class="team_img" style="overflow:hidden">
+          <img src="@/assets/img_team/cyy.jpg" width="140%" style="margin-left:-50px" class="zoom">
+        </div>
+        
+        <div class="team_info">
+          <span>陈 迎语</span>
+
+          <!-- 取消浮动 -->
+          <div class="quxiao"></div>
+
+          <div style="margin-top:20px;position:relative;float:left;">
+          爱 好:
+          <br>
+          生 日:
+          <br>
+          负责部分:
+          </div>
+
+          <div style="margin-top:20px;margin-left:20px;position:relative;float:left">
+          音乐、游戏
+          <br>
+          1999-10-17
+          <br>
+          主页
+          </div>
+          
+        </div>
+      </el-card>
+
+      <el-card class="card">
+        <div class="team_img">
+          <img src="@/assets/img_team/cxh.jpg" class="zoom" style="width:100%">
+        </div>
+        <div class="team_info">
+          <span>陈 旭辉</span>
+
+          <!-- 取消浮动 -->
+          <div class="quxiao"></div>
+
+          <div style="margin-top:20px;position:relative;float:left;">
+          爱 好:
+          <br>
+          生 日:
+          <br>
+          负责部分:
+          </div>
+
+          <div style="margin-top:20px;margin-left:20px;position:relative;float:left">
+          排球、看剧、写代码
+          <br>
+          1999-10-30
+          <br>
+          Header、Footer、
+          <br>
+          企业动态
+          </div>
+          
+        </div>
+      </el-card>
+
+      <el-card class="card">
+        <div class="team_img">
+          <img src="@/assets/img_team/yp.jpg" class="zoom" style="width:100%">
+        </div>
+        <div class="team_info">
+          <span>杨 璞</span>
+
+          <!-- 取消浮动 -->
+          <div class="quxiao"></div>
+
+          <div style="margin-top:20px;position:relative;float:left;">
+          爱 好:
+          <br>
+          生 日:
+          <br>
+          负责部分:
+          </div>
+
+          <div style="margin-top:20px;margin-left:20px;position:relative;float:left">
+          
+          <br>
+          
+          <br>
+          关于一诺
+          </div>
+          
+        </div>
+      </el-card>
+
+      <el-card class="card">
+        <div class="team_img">
+          <img src="@/assets/img_team/yp.jpg" class="zoom" style="width:100%">
+        </div>
+        
+        <div class="team_info">
+          <span>夏 铭</span>
+
+          <!-- 取消浮动 -->
+          <div class="quxiao"></div>
+
+          <div style="margin-top:20px;position:relative;float:left;">
+          爱 好:
+          <br>
+          生 日:
+          <br>
+          负责部分:
+          </div>
+
+          <div style="margin-top:20px;margin-left:20px;position:relative;float:left">
+          
+          <br>
+          
+          <br>
+          预约检测
+          </div>
+          
+        </div>
+      </el-card>
+    </div>
 
     <y-footer class="foot"></y-footer>
   </div>
@@ -176,13 +332,15 @@
 <script>
 import YHeader from '../../components/Header';
 import YFooter from '../../components/Footer';
+import YZixun from '../../components/zixun'
 
 export default {
   name: "Home",
   components: {
     //这里是用到等各种组件
     YHeader,
-    YFooter
+    YFooter,
+    YZixun
   },
   data () {
     return {
@@ -192,7 +350,7 @@ export default {
         require("@/assets/img_home/banner3.jpg")
       ],
       currentIndex: 0,
-      timer: null //定时器
+      timer: null, //定时器,
     };
   },
 
@@ -200,7 +358,88 @@ export default {
     switchTo (path) {
       console.log(this.$router);
       this.$router.replace(path);
-    }
+    },
+    fadeout1(){
+      //console.log('yiru')
+      this.$('#warn_img1').animate({
+        width:"128px",
+        height:"128px",
+        opacity:"1",
+        left:"0px",
+        top:"0px"
+      },200)
+    },
+    fadein1(){
+      this.$('#warn_img1').animate({
+        width:"0px",
+        height:"0px",
+        opacity:"1",
+        left:"64px",
+        top:"64px",
+        display:"block"
+      },200)
+    },
+    fadeout2(){
+      //console.log('yiru')
+      this.$('#warn_img2').animate({
+        width:"128px",
+        height:"128px",
+        opacity:"1",
+        left:"0px",
+        top:"0px"
+      },200)
+    },
+    fadein2(){
+      this.$('#warn_img2').animate({
+        width:"0px",
+        height:"0px",
+        opacity:"1",
+        left:"64px",
+        top:"64px",
+        display:"block"
+      },200)
+    },
+    fadeout3(){
+      //console.log('yiru')
+      this.$('#warn_img3').animate({
+        width:"128px",
+        height:"128px",
+        opacity:"1",
+        left:"0px",
+        top:"0px"
+      },200)
+    },
+    fadein3(){
+      this.$('#warn_img3').animate({
+        width:"0px",
+        height:"0px",
+        opacity:"1",
+        left:"64px",
+        top:"64px",
+        display:"block"
+      },200)
+    },
+    fadeout4(){
+      //console.log('yiru')
+      this.$('#warn_img4').animate({
+        width:"128px",
+        height:"128px",
+        opacity:"1",
+        left:"0px",
+        top:"0px"
+      },200)
+    },
+    fadein4(){
+      this.$('#warn_img4').animate({
+        width:"0px",
+        height:"0px",
+        opacity:"1",
+        left:"64px",
+        top:"64px",
+        display:"block"
+      },200)
+    },
+    
   }
 };
 </script>
@@ -211,6 +450,7 @@ export default {
 }
 
 
+
 // 取消浮动（float：left）
 .quxiao{
   clear: both;
@@ -219,8 +459,6 @@ export default {
 }
 
 .main_info {
-  
-  margin-left: 120px;
   margin-left: 120px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -531,7 +769,7 @@ export default {
 
 .hr1{
   width: 1216px;
-  height: 300px;
+  height: 100px;
   margin:auto;
 }
 
@@ -544,5 +782,136 @@ export default {
   margin:auto;
   top: -70px;
   background-color: white;
+}
+
+.warn{
+  width: 1216px;
+  height: 200px;
+  margin:auto;
+  margin-top: 20px;
+}
+
+#warn_img1{
+  position: relative;
+  display: block;
+  top:64px;
+  left: 64px;
+  width: 0px;
+  height: 0px;
+}
+#warn_img2{
+  position: relative;
+  display: block;
+  top:64px;
+  left: 64px;
+  width: 0px;
+  height: 0px;
+}
+#warn_img3{
+  position: relative;
+  display: block;
+  top:64px;
+  left: 64px;
+  width: 0px;
+  height: 0px;
+}
+#warn_img4{
+  position: relative;
+  display: block;
+  top:64px;
+  left: 64px;
+  width: 0px;
+  height: 0px;
+}
+
+.warn1{
+  position: relative;
+  float: left;
+  margin-left: 80px;
+  margin-right: 80px;
+  width: 128px;
+  height: 128px;
+  background-image: url("~@/assets/img_home/test.png");
+}
+.warn2{
+  position: relative;
+  float: left;
+  margin-left: 80px;
+  margin-right: 80px;
+  width: 128px;
+  height: 128px;
+  background-image: url("~@/assets/img_home/test.png");
+  background-position: 128px 128px;
+}
+.warn3{
+  position: relative;
+  float: left;
+  margin-left: 80px;
+  margin-right: 80px;
+  width: 128px;
+  height: 128px;
+  background-image: url("~@/assets/img_home/test.png");
+  background-position: 256px 256px;
+}
+.warn4{
+  position: relative;
+  float: left;
+  margin-left: 80px;
+  margin-right: 80px;
+  width: 128px;
+  height: 128px;
+  background-image: url("~@/assets/img_home/test.png");
+  background-position: 384px 384px;
+}
+
+.hr2{
+  width: 1216px;
+  height: 100px;
+  margin:auto;
+}
+
+.hr2_char{
+  position: relative;
+  width: 200px;
+  height: 100px;
+  font-size: 18px;
+  font-family: "微软雅黑";
+  margin:auto;
+  top: -60px;
+  background-color: white;
+}
+
+.team{
+  width: 1216px;
+  height: 500px;
+  margin:auto;
+  margin-top:30px;
+  margin-bottom: 50px;
+}
+
+.card{
+  position: relative;
+  float: left;
+  width: 280px;
+  height: 480px;
+  margin:5px;
+}
+
+.team_img{
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border: grey;
+  border-style: solid;
+  overflow: hidden;
+}
+
+.team_info{
+  font-family: '微软雅黑';
+  font-size: 15px;
+  text-align: left;
+  margin-left: 5px;
+  margin-top: 20px;
+  line-height: 30px;
 }
 </style>

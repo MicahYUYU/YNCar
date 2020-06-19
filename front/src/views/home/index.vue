@@ -228,7 +228,11 @@
           <br>
           1999-10-17
           <br>
-          主页
+          <span style="font-size:13px;">主页、预约检测左侧动画</span>      
+          <br>
+          <span style="font-size:13px;">、陪同看车左侧动画</span>
+          <br>
+          <span style="font-size:13px;">、咨询界面</span>  
           </div>
           
         </div>
@@ -257,9 +261,11 @@
           <br>
           1999-10-30
           <br>
-          Header、Footer、
+          <span style="font-size:13px">Header、Footer、</span>
           <br>
-          企业动态
+          <span style="font-size:12px">企业动态、预约检测右侧表单</span>
+          <br>
+          <span style="font-size:13px">陪同看车右侧表单</span>
           </div>
           
         </div>
@@ -318,7 +324,7 @@
           <br>
           
           <br>
-          预约检测
+          文档
           </div>
           
         </div>
@@ -892,7 +898,7 @@ export default {
 .card{
   position: relative;
   float: left;
-  width: 280px;
+  width: 290px;
   height: 480px;
   margin:5px;
 }
@@ -912,6 +918,6 @@ export default {
   text-align: left;
   margin-left: 5px;
   margin-top: 20px;
-  line-height: 30px;
+  line-height: 25px;
 }
 </style>

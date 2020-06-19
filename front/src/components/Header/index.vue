@@ -35,7 +35,7 @@
 export default {
   name: 'header',
   components: {},
-  data() {
+  data () {
     return {
       navList: [
         { name: '/', navItem: '首页' },
@@ -46,7 +46,7 @@ export default {
     };
   },
   methods: {
-    switchTo(path) {
+    switchTo (path) {
       console.log(this.$router);
       this.$router.replace(path);
     },
@@ -63,6 +63,7 @@ export default {
   height: 90px;
   z-index: 100;
   background-color: #fff;
+  border-bottom: solid 1px #dddddd;
 
   .home {
     position: absolute;
@@ -141,7 +142,7 @@ export default {
       //   opacity: 0;
       display: none;
       &::before {
-        content: '';
+        content: "";
         width: 0;
         height: 0;
         border: 20px solid;
@@ -151,7 +152,7 @@ export default {
         border-color: transparent transparent #0f6bb0;
       }
       .tansparent {
-        content: '';
+        content: "";
         width: 0;
         height: 0;
         border: 20px solid;
@@ -171,7 +172,7 @@ export default {
     right: 90px;
     width: 250px;
     height: 90px;
-    border-left: solid #dddddd 2px;
+    border-left: solid #dddddd 1px;
     img {
       position: relative;
       top: 5px;

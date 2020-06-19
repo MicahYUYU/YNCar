@@ -1,5 +1,10 @@
 import Vue from 'vue'
-import { Button, Loading, Dialog, MessageBox, Table, TableColumn, Carousel, CarouselItem, Menu, MenuItem, Submenu, Pagination,Card,Input } from 'element-ui';
+import {
+    Button, Loading, Dialog, MessageBox, Table, TableColumn,
+    Carousel, CarouselItem, Menu, MenuItem,
+    Submenu, Pagination, Card, Input,
+    DatePicker, Form, FormItem, Select, Option, Checkbox
+} from 'element-ui';
 
 
 import 'element-ui/lib/theme-chalk/index.css'
@@ -18,6 +23,12 @@ Vue.use(Submenu);
 Vue.use(Pagination);
 Vue.use(Input);
 Vue.use(Card);
+Vue.use(DatePicker);
+Vue.use(Form);
+Vue.use(FormItem);
+Vue.use(Select);
+Vue.use(Option);
+Vue.use(Checkbox);
 
 
 Vue.use(Loading.directive);

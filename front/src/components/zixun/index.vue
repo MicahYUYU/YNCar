@@ -9,8 +9,8 @@
         :visible.sync="dialogVisible"
         width="318px"
         height="1000px">
-        <div style="position:relative;top:-65px;left:-20px">
-            <span style="font-size:18px;color:white">一诺检测</span>
+        <div class="tit">
+            <span style="font-size:18px;color:white;">一诺检测</span>
         </div>
 
         <div class="duihua">
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <div class="footer">
+        <div class="zixun_footer">
             <div class="jietu">
                 <img src="@/assets/img_common/wbcl.png">
             </div>
@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .zixun{
   width: 100px;
   z-index:999;
@@ -81,6 +81,14 @@ export default {
   position: fixed;
   right:0px;
   top:600px;
+}
+
+.tit{
+    position:relative;
+    top:-65px;
+    left:-20px;
+    width: 318px;
+    background-color: #2174C3;
 }
 
 .el-dialog__header{
@@ -94,7 +102,7 @@ export default {
     background-color: white;
 }
 
-.footer{
+.zixun_footer{
     margin-left: -20px;
     width: 318px;
     height: 29px;

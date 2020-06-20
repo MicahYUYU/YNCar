@@ -220,12 +220,17 @@ export default {
       } else {
         this.district = '';
       }
+    },
+    executeAnimation () {
+      console.log("watch 动画执行");
+      this.fadeout1();
+      this.fadeout2();
     }
   },
   mounted () {
-    this.fadeout1();
-    this.fadeout2();
-
+    // this.fadeout1();
+    // this.fadeout2();
+    this.executeAnimation();
   },
   beforeMount () {
     this.updateCity();

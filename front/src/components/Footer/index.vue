@@ -132,7 +132,7 @@ export default {
     span {
       position: relative;
       top: -23px;
-      left: 25px;
+      left: 40px;
       font-size: 18px;
       color: #999999;
     }

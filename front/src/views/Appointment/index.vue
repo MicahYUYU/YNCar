@@ -2,8 +2,8 @@
   <!-- 预约检测 -->
   <div class="Appointment">
     <y-header></y-header>
-    <y-detect :isShow="detectVisible" @change="ChangeComponent"></y-detect>
-    <y-watch :isShow="watchVisible" @change="ChangeComponent"></y-watch>
+    <y-detect :isShow="detectVisible" @change="ChangeComponent" ref="runDetectAnimation"></y-detect>
+    <y-watch :isShow="watchVisible" @change="ChangeComponent" ref="runWatchAnimation"></y-watch>
     <y-footer></y-footer>
   </div>
 </template>
@@ -35,13 +35,39 @@ export default {
       if (this.detectVisible) {
         this.detectVisible = false;
         this.watchVisible = true;
+        console.log("执行陪同看车动画");
+        this.$refs.runDetectAnimation.executeAnimation();
       }
       else {
         this.detectVisible = true;
         this.watchVisible = false;
+        console.log("执行预约检测动画");
+        this.$refs.runWatchAnimation.executeAnimation();
       }
     }
   },
+  //   watch: {
+  //     "detectVisible": {
+  //       handler: function (newValue, oldValue) {
+  //         if (newValue) {
+  //           console.log("执行预约检测动画");
+  //           this.$refs.runWatchAnimation.executeAnimation();
+  //         }
+  //         console.log("this is older detectVisible:" + oldValue);
+  //       },
+  //       deep: true
+  //     },
+  //     "watchVisible": {
+  //       handler: function (newValue, oldValue) {
+  //         if (newValue) {
+  //           console.log("执行陪同看车动画");
+  //           this.$refs.runDetectAnimation.executeAnimation();
+  //         }
+  //         console.log("this is older detectVisible:" + oldValue);
+  //       },
+  //       deep: true
+  //     },
+  //   },
   mounted () {
     //这里是页面加载完毕以后要自动执行的函数
   }

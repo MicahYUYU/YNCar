@@ -231,7 +231,8 @@ export default {
         height: "502px",
         opacity: "1",
         left: "50px",
-        top: "0px"      }, 200)    },
+        top: "0px"      }, 200)
+    },
     updateCity: function () {
       for (var i in this.arr) {
         var obj = this.arr[i];
@@ -257,6 +258,12 @@ export default {
       } else {
         this.district = '';
       }
+    },
+    executeAnimation () {
+      this.fadeout1();
+      this.fadeout2();
+      this.fadeout3();
+      console.log("detect 动画执行");
     }
   },
   beforeMount () {
@@ -274,9 +281,7 @@ export default {
 
   },
   mounted () {
-    this.fadeout1();
-    this.fadeout2();
-    this.fadeout3();
+    this.executeAnimation();
   },
 }
 </script>

@@ -365,6 +365,7 @@ export default {
     position: relative;
     top: -1500px;
     left: 955px;
+    z-index: -2;
   }
   .bg_title {
     position: relative;
@@ -388,7 +389,7 @@ export default {
     position: relative;
     top: -1780px;
     left: 700px;
-    z-index: 3;
+    z-index: -1;
     .w1 {
       position: relative;
       font-weight: 20;

@@ -10,11 +10,20 @@
         width="318px"
         height="1000px">
         <div class="tit">
-            <span style="font-size:18px;color:white;">一诺检测</span>
+            <div class="tit_char">
+                <span style="font-size:18px;color:white;">一诺检测</span>
+            </div>
+
+            <div class="close" @click="dialogVisible = false" >
+                <img src="@/assets/img_common/close.png" >
+            </div>
+            <!-- 取消浮动 -->
+            <div class="quxiao"></div>
         </div>
+        
 
         <div class="duihua">
-            <div>
+            <div style="position:relative;left:-53px">
                 下午2:34:23
             </div>
             <div class="user">
@@ -25,7 +34,9 @@
                     <img src="@/assets/img_common/user.png" width="40px">
                 </div>
             </div>
-
+            <div style="position:relative;">
+                下午2:34:24
+            </div>
             <div class="robot">
                 <div class="photo2">
                     <img src="@/assets/img_common/robot.png" width="40px">
@@ -88,24 +99,28 @@ export default {
     top:-65px;
     left:-20px;
     width: 318px;
+    height: 40px;
     background-color: #2174C3;
 }
 
-.el-dialog__header{
-    background-color: #2174C3;
-    height: 15px;
-    
+.tit_char{
+    padding-top:10px;
+    padding-left: 30px;
+    float:left;
 }
 
-
-.el-icon{
-    background-color: white;
+.close{
+    padding-top: 15px;
+    padding-right: 20px;
+    float:right;
+    cursor: pointer;
 }
+
 
 .zixun_footer{
     margin-left: -20px;
     width: 318px;
-    height: 29px;
+    height: 120px;
 }
 
 .duihuakuang{
@@ -144,7 +159,7 @@ export default {
     margin-top: 5px;
     border-radius: 10px;
     background-color: #2174C3;
-    left: 75px;
+    margin-left: -40px;
 }
 
 .photo1{
@@ -155,6 +170,7 @@ export default {
     width: 40px;
     height: 40px;
     left: 80px;
+    margin-left: -70px;
 }
 
 .robot{

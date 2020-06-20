@@ -377,11 +377,11 @@ export default {
     },
     fadein1(){
       this.$('#warn_img1').animate({
-        width:"0px",
-        height:"0px",
-        opacity:"1",
-        left:"64px",
-        top:"64px",
+        width:"256px",
+        height:"256px",
+        opacity:"0",
+        left:"-64px",
+        top:"-64px",
         display:"block"
       },200)
     },
@@ -397,11 +397,11 @@ export default {
     },
     fadein2(){
       this.$('#warn_img2').animate({
-        width:"0px",
-        height:"0px",
-        opacity:"1",
-        left:"64px",
-        top:"64px",
+        width:"256px",
+        height:"256px",
+        opacity:"0",
+        left:"-64px",
+        top:"-64px",
         display:"block"
       },200)
     },
@@ -417,11 +417,11 @@ export default {
     },
     fadein3(){
       this.$('#warn_img3').animate({
-        width:"0px",
-        height:"0px",
-        opacity:"1",
-        left:"64px",
-        top:"64px",
+        width:"256px",
+        height:"256px",
+        opacity:"0",
+        left:"-64px",
+        top:"-64px",
         display:"block"
       },200)
     },
@@ -437,11 +437,11 @@ export default {
     },
     fadein4(){
       this.$('#warn_img4').animate({
-        width:"0px",
-        height:"0px",
-        opacity:"1",
-        left:"64px",
-        top:"64px",
+        width:"256px",
+        height:"256px",
+        opacity:"0",
+        left:"-64px",
+        top:"-64px",
         display:"block"
       },200)
     },
@@ -800,34 +800,38 @@ export default {
 #warn_img1{
   position: relative;
   display: block;
-  top:64px;
-  left: 64px;
-  width: 0px;
-  height: 0px;
+  top:-64px;
+  left: -64px;
+  width: 256px;
+  height: 256px;
+  opacity: 0;
 }
 #warn_img2{
   position: relative;
   display: block;
-  top:64px;
-  left: 64px;
-  width: 0px;
-  height: 0px;
+  top:-64px;
+  left: -64px;
+  width: 256px;
+  height: 256px;
+  opacity: 0;
 }
 #warn_img3{
   position: relative;
   display: block;
-  top:64px;
-  left: 64px;
-  width: 0px;
-  height: 0px;
+  top:-64px;
+  left: -64px;
+  width: 256px;
+  height: 256px;
+  opacity: 0;
 }
 #warn_img4{
   position: relative;
   display: block;
-  top:64px;
-  left: 64px;
-  width: 0px;
-  height: 0px;
+  top:-64px;
+  left: -64px;
+  width: 256px;
+  height: 256px;
+  opacity: 0;
 }
 
 .warn1{

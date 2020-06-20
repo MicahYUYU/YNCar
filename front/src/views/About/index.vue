@@ -347,6 +347,7 @@ export default {
     position: relative;
     top: -1200px;
     left: 355px;
+    z-index:5;
   }
 
   .img4 {
@@ -356,6 +357,7 @@ export default {
     top: -900px;
     left: 655px;
     overflow: hidden;
+    z-index:4;
   }
   .bg {
     height: 300px;

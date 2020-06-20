@@ -2,6 +2,7 @@
   <!-- 预约检测 -->
   <div class="Appointment">
     <y-header></y-header>
+    <y-zixun></y-zixun>
     <y-detect :isShow="detectVisible" @change="ChangeComponent" ref="runDetectAnimation"></y-detect>
     <y-watch :isShow="watchVisible" @change="ChangeComponent" ref="runWatchAnimation"></y-watch>
     <y-footer></y-footer>
@@ -13,6 +14,7 @@ import YHeader from '@components/Header';
 import YFooter from '@components/Footer';
 import YDetect from '@components/appointment/detect';
 import YWatch from '@components/appointment/watch';
+import YZixun from '../../components/zixun'
 export default {
   name: 'Appointment',
   components: {
@@ -20,7 +22,8 @@ export default {
     YHeader,
     YFooter,
     YDetect,
-    YWatch
+    YWatch,
+    YZixun
   },
   data () {
     return {

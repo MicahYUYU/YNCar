@@ -220,18 +220,25 @@ export default {
 
     fadeout3 () {
       this.$('#person').animate({
+        width: "500px",
+        height: "650px",
+        opacity: "1",
+        left: "50px",
+        top: "0px"      }, 200);
+      
+      this.$('#person').animate({
         width: "300px",
         height: "400px",
         opacity: "1",
-        left: "0px",
-        top: "100px"      }, 100);
-
+        left: "50px",
+        top: "0px"      }, 200);
       this.$('#person').animate({
         width: "376px",
         height: "502px",
         opacity: "1",
         left: "50px",
-        top: "0px"      }, 200)
+        top: "0px"      }, 200);
+      
     },
     updateCity: function () {
       for (var i in this.arr) {

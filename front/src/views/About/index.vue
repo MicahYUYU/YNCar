@@ -123,9 +123,24 @@
     </div>
     <div class="white">
       <div class="car">
-        <img src="@/assets/img_about/car.png" />
+        <div class="car1">
+          <img src="@/assets/img_about/car.png" />
+        </div>
+        <div class="car2">
+          <img src="@/assets/img_about/car.png"/>
+        </div>
+        <div class="car3">
+          <img src="@/assets/img_about/car.png"/>
+        </div>
+        
       </div>
+
+      
       <span class="carWord">值得信赖的二手车专家</span>
+
+      <div style="width:100%;margin-top:-200px;position:relative;float:left;overflow: hidden;">
+        <img src="@/assets/img_about/white.png" style="background-color:black;opacity:1;width:1500px;height:170px;">
+      </div>
     </div>
     <y-footer></y-footer>
   </div>
@@ -521,26 +536,70 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 240px;
+    height: 250px;
+    //overflow: hidden;
     z-index: 5;
+
+    .car{
+      width: 100%;
+      height: 238px;
+      overflow: hidden;
+      position: relative;
+      float: left;
+    }
+    .car1 {
+      position: relative;
+      float: left;
+      width: 789px;
+      height: 238px;
+      transition: all 2s;
+      left: -2100px;
+      z-index: 3;
+    }
+
+    .car2{
+      position: relative;
+      float: left;
+      width: 789px;
+      height: 238px;
+      transition: all 2s;
+      left: -500px;
+      margin-top: -238px;
+      z-index: 3;
+    }
+
+    .car3{
+      position: relative;
+      float: left;
+      width: 789px;
+      height: 238px;
+      transition: all 2s;
+      left: 1200px;
+      margin-top: -238px;
+      z-index: 3;
+    }
+    .car:hover .car1{
+      transform: translate(1800px, 0px);
+    }
+
+    .car:hover .car2{
+      transform: translate(1800px, 0px);
+    }
+    .car:hover .car3{
+      transform: translate(1800px, 0px);
+    }
   }
 
-  .car {
-    position: relative;
-    width: 608px;
-    height: 304px;
-    transition: all 3s;
-    left: -300px;
-  }
-  .car:hover {
-    transform: translate(1900px, 0px);
-  }
+  
   .carWord {
     height: 10px;
     width: 50px;
     position: relative;
-    top: -120px;
+    top: -75px;
     font-size: 30px;
+    color:white;
+    z-index: 3;
+    font-family: "宋体";
   }
 }
 </style>

@@ -240,7 +240,7 @@
 
       <el-card class="card">
         <div class="team_img">
-          <img src="@/assets/img_team/cxh.jpg" class="zoom" style="width:100%">
+          <img src="@/assets/img_team/cxh.jpg" class="zoom" style="width:100%;margin-top:-40px">
         </div>
         <div class="team_info">
           <span>陈 旭辉</span>
@@ -290,9 +290,9 @@
           </div>
 
           <div style="margin-top:20px;margin-left:20px;position:relative;float:left">
-          
+          代码、游戏、篮球
           <br>
-          
+          1999-02-01
           <br>
           关于一诺
           </div>
@@ -302,7 +302,7 @@
 
       <el-card class="card">
         <div class="team_img">
-          <img src="@/assets/img_team/yp.jpg" class="zoom" style="width:100%">
+          <img src="@/assets/img_team/xm.jpg" class="zoom" style="width:100%">
         </div>
         
         <div class="team_info">
@@ -322,9 +322,9 @@
           <div style="margin-top:20px;margin-left:20px;position:relative;float:left">
           
           <br>
-          
+          1999-11-29
           <br>
-          文档
+          ppt与文档
           </div>
           
         </div>

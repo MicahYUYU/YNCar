@@ -6,7 +6,7 @@ import Home from '../views/home'
 import Appointment from '../views/Appointment'
 import About from '../views/About'
 import Enterprise from '../views/Enterprise'
-import Watch from '../views/Watch'
+//import Watch from '../views/Watch'
 Vue.use(VueRouter)
 
 
@@ -22,11 +22,6 @@ const routes = [
         path: '/appointment',
         name: 'appointment',
         component: Appointment
-    },
-    {
-        path: '/watch',
-        name: 'watch',
-        component: Watch
     },
     {
         path: '/about',

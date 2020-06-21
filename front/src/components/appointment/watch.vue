@@ -195,6 +195,21 @@ export default {
         left: "0px",
         top: "0px"      }, 300);
     },
+    //反函数
+    recover(){
+      this.$('#pic_title').animate({
+        width: "0px",
+        height: "0px",
+        opacity: "1",
+        left: "0px",
+        top: "0px"      }, 10);
+      this.$('#zoom_car').animate({
+        width: "0px",
+        height: "0px",
+        opacity: "1",
+        left: "0px",
+        top: "0px"      }, 10);
+    },
     updateCity: function () {
       for (var i in this.arr) {
         var obj = this.arr[i];

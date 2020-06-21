@@ -240,6 +240,42 @@ export default {
         top: "0px"      }, 200);
       
     },
+    // 反函数
+    recover(){
+      this.$('#pic_title').animate({
+        width: "0px",
+        height: "0px",
+        opacity: "0",
+        left: "0px",
+        top: "0px"      }, 10);
+      this.$('#zoom_char1').animate({
+        width: "0px",
+        height: "0px",
+        opacity: "1",
+        left: "0px",
+        top: "0px"      }, 10);
+
+      this.$('#zoom_char2').animate({
+        width: "0px",
+        height: "0px",
+        opacity: "1",
+        left: "0px",
+        top: "0px"      }, 10);
+
+      this.$('#zoom_char3').animate({
+        width: "0px",
+        height: "0px",
+        opacity: "1",
+        left: "0px",
+        top: "0px"      }, 10);
+
+      this.$('#person').animate({
+        width: "0px",
+        height: "0px",
+        opacity: "1",
+        left: "0px",
+        top: "0px"      }, 10);
+    },
     updateCity: function () {
       for (var i in this.arr) {
         var obj = this.arr[i];

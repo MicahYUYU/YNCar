@@ -196,7 +196,7 @@ export default {
         top: "0px"      }, 300);
     },
     //反函数
-    recover(){
+    recover () {
       this.$('#pic_title').animate({
         width: "0px",
         height: "0px",
@@ -245,7 +245,7 @@ export default {
   mounted () {
     // this.fadeout1();
     // this.fadeout2();
-    this.executeAnimation();
+    // this.executeAnimation();
   },
   beforeMount () {
     this.updateCity();
@@ -258,7 +258,19 @@ export default {
     },
     city: function () {
       this.updateDistrict();
-    }
+    },
+    "isShow": {
+      handler: function (newValue, oldValue) {
+        if (newValue) {
+          console.log("执行预约检测动画");
+          this.executeAnimation();
+        } else {
+          this.recover();
+        }
+        console.log("this is older detectVisible:" + oldValue);
+      },
+      deep: true
+    },
   }
 }
 </script>

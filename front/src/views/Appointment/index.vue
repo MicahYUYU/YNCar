@@ -40,37 +40,39 @@ export default {
         this.watchVisible = true;
         console.log("执行陪同看车动画");
         this.$refs.runDetectAnimation.executeAnimation();
+        // this.$refs.runWatchAnimation.recover();
       }
       else {
         this.detectVisible = true;
         this.watchVisible = false;
         console.log("执行预约检测动画");
         this.$refs.runWatchAnimation.executeAnimation();
+        // this.$refs.runDetectAnimation.recover();
       }
     }
   },
-  //   watch: {
-  //     "detectVisible": {
-  //       handler: function (newValue, oldValue) {
-  //         if (newValue) {
-  //           console.log("执行预约检测动画");
-  //           this.$refs.runWatchAnimation.executeAnimation();
-  //         }
-  //         console.log("this is older detectVisible:" + oldValue);
-  //       },
-  //       deep: true
+  // watch: {
+  //   "detectVisible": {
+  //     handler: function (newValue, oldValue) {
+  //       if (newValue) {
+  //         console.log("执行预约检测动画");
+  //         this.$refs.runWatchAnimation.executeAnimation();
+  //       }
+  //       console.log("this is older detectVisible:" + oldValue);
   //     },
-  //     "watchVisible": {
-  //       handler: function (newValue, oldValue) {
-  //         if (newValue) {
-  //           console.log("执行陪同看车动画");
-  //           this.$refs.runDetectAnimation.executeAnimation();
-  //         }
-  //         console.log("this is older detectVisible:" + oldValue);
-  //       },
-  //       deep: true
-  //     },
+  //     deep: true
   //   },
+  //   "watchVisible": {
+  //     handler: function (newValue, oldValue) {
+  //       if (newValue) {
+  //         console.log("执行陪同看车动画");
+  //         this.$refs.runDetectAnimation.executeAnimation();
+  //       }
+  //       console.log("this is older detectVisible:" + oldValue);
+  //     },
+  //     deep: true
+  //   },
+  // },
   mounted () {
     //这里是页面加载完毕以后要自动执行的函数
   }

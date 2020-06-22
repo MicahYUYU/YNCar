@@ -3,9 +3,9 @@
     <div class="zixun" @click="dialogVisible = true">
         <img src="@/assets/img_common/zixun.png" width="100%">
     </div>
-
+    
     <el-dialog
-        style="color:white;text-align:center"
+        style="color:white;text-align:center;"
         :visible.sync="dialogVisible"
         width="318px"
         height="1000px">
@@ -64,16 +64,18 @@
             </div>
         </div>
     </el-dialog>
+    
   </div>
 </template>
 
 <script>
 export default {
   data () {
-    return {
-        dialogVisible: false,
+    return {  
+        dialogVisible:false,
         textarea: '',
     }
+    
   },
 
   components: {},
@@ -91,8 +93,9 @@ export default {
   display: block; 
   position: fixed;
   right:0px;
-  top:600px;
+  bottom: 100px;
 }
+
 
 .tit{
     position:relative;

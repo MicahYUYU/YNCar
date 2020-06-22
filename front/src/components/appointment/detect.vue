@@ -236,7 +236,7 @@ export default {
         ],
         ycode:[
           { required: true,message: '请输入验证码', trigger: 'blur' },
-          { min: 11, max: 11, message: '11位手机号', trigger: 'blur' }
+          { min: 4, max: 4, message: '4位验证码', trigger: 'blur' }
         ]
       },
       value: [],

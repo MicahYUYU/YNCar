@@ -122,7 +122,7 @@
       </p>
     </div>
     <div class="white">
-      <div class="car">
+      <div class="car" @mouseover="car_run()">
         <div class="car1">
           <img src="@/assets/img_about/car.png" />
         </div>
@@ -132,14 +132,23 @@
         <div class="car3">
           <img src="@/assets/img_about/car.png"/>
         </div>
-        
       </div>
+      <!-- 取消浮动 -->
+      <div class="quxiao"></div>
 
       
-      <span class="carWord">值得信赖的二手车专家</span>
 
-      <div style="width:100%;margin-top:-200px;position:relative;float:left;overflow: hidden;">
+      <div style="width:100%;margin-top:-160px;position:relative;float:left;overflow: hidden;">
         <img src="@/assets/img_about/white.png" style="background-color:black;opacity:1;width:1500px;height:170px;">
+      </div>
+
+      <div id="carWord">
+        <span style="font-family: '宋体';
+      color: white;
+      width: 400px;
+      height: 50px;
+      font-size: 26px;
+      margin: auto;">值得信赖的二手车专家</span>
       </div>
     </div>
     <y-footer></y-footer>
@@ -169,7 +178,16 @@ export default {
     },
     moveR() {
       this.$("#picR").animate({ right: "100%" }, 500);
-    }
+    },
+    car_run(){
+      this.$('#carWord').animate({
+        width:"400px",
+        height:"50px",
+        top:"-100px",
+        opacity:"1"
+      },100)
+    },
+
   },
   mounted() {
     //这里是页面加载完毕以后要自动执行的函数
@@ -284,6 +302,7 @@ export default {
     background-image: url("~@/assets/img_about/img1.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 235px;
     width: 100%;
     z-index: -1;
@@ -309,7 +328,7 @@ export default {
     //position: relative;
     //margin: 0, auto;
     // left: 2;
-    height: 1030px;
+    height: 800px;
     width: 100%;
     overflow: hidden;
   }
@@ -536,7 +555,7 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 250px;
+    height: 300px;
     //overflow: hidden;
     z-index: 5;
 
@@ -578,28 +597,32 @@ export default {
       margin-top: -238px;
       z-index: 3;
     }
-    .car:hover .car1{
-      transform: translate(1800px, 0px);
+
+    
+
+    #carWord {
+      position: relative;
+      //top: -75px;
+      opacity: 0;
+      transition: all 0.5s;
+      margin:auto;
+      top:-100px;
+      z-index: 3;
     }
 
-    .car:hover .car2{
-      transform: translate(1800px, 0px);
-    }
-    .car:hover .car3{
-      transform: translate(1800px, 0px);
-    }
   }
-
   
-  .carWord {
-    height: 10px;
-    width: 50px;
-    position: relative;
-    top: -75px;
-    font-size: 30px;
-    color:white;
-    z-index: 3;
-    font-family: "宋体";
-  }
+  .white:hover .car1{
+      transform: translate(1800px, 0px);
+    }
+
+    .white:hover .car2{
+      transform: translate(1800px, 0px);
+    }
+    .white:hover .car3{
+      transform: translate(1800px, 0px);
+    }
+  
+
 }
 </style>
